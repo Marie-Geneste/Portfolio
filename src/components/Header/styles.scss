@@ -1,10 +1,10 @@
 @use 'src/styles/vars';
 
 .header{
-  height: 5rem;
-  border-bottom: solid 100px black;
+  height: 6rem;
   background: linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);
-  clip-path: inset(0px round 10px);border-bottom: solid 2px black;
+  clip-path: inset(0px round 10px);
+  border-bottom: solid 3px black;
   animation: huerotate 6s infinite linear;
   filter: hue-rotate(360deg);
   
@@ -19,26 +19,23 @@
     }
 }
 
-
-
 .navlink{
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  
   font-weight: 700;
   display: flex;
   justify-content: space-around;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-radius: 1rem;
+  
 
   & a {
-    transition: background-color 2s ease-out 100ms;
-    border-radius: 1rem;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
     
     &:hover{
-      background-color: unset;
-      background-color: vars.$alt-color;
-      border-radius: 1rem;
+      transform: scale(1.5);
     }
     
 }

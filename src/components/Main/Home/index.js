@@ -1,12 +1,11 @@
 import './styles.scss';
-import Home from './Home';
 
-function Main() {
+function Home() {
   return (
     <div className="main">
-      <Home />
+      Marie Geneste
     </div>
   );
 }
 
-export default Main;
+export default Home;
