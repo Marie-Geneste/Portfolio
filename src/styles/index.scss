@@ -1,13 +1,11 @@
 @use 'reset';
 @use 'vars';
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
   background-color: vars.$primary-color;
-  color: white;
 }
 
 .header{
-  font-family:'Dancing Script', cursive;
+  font-family: vars.$primary-font;
 }
 
