@@ -1,39 +1,30 @@
 @use 'src/styles/vars';
 
-@mixin center(){
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-    left:50%;
-    top:50%;
-}
+
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
 .home{
-  position:absolute;
-  @include center();
-  
+  margin: auto;
 }
 
 .title {
   &_name{
     font-size: 6rem;
-    margin-bottom: 2rem;
+    margin: auto;
     font-weight: 800;
     color: transparent;
     background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
-    background-position: 40% 50%;
+    background-position: 34% 50%;
     -webkit-background-clip: text;
-    position:relative;
     line-height:90px;
-    letter-spacing: -8px;
     padding: 2rem;
+    width: 65%;
   }
 
   &_job{
     font-size: 2.5rem;
-    color: rgb(4, 14, 54);
+    color: vars.$dark-color;
     font-family: vars.$primary-font;
     animation: apparitionJob 2s ease-out;
     font-weight: 600;
@@ -55,6 +46,17 @@
       transform: translateX(0px);
     }
   }
+}
+
+.citation{
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.description{
+  margin: 2rem;
+  border: solid 2px vars.$dark-color;
+  border-radius: 15px;
 }
 
 

@@ -2,12 +2,12 @@
 
 .header{
   height: 6rem;
-  background: linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);
-  clip-path: inset(0px round 10px);
-  border-bottom: solid 3px black;
-  animation: huerotate 6s infinite linear;
-  filter: hue-rotate(360deg);
-  
+  background-image: url(https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg);
+  background-position: 40% 35%;
+  // background: linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);
+  border-bottom: solid 2px rgb(17, 7, 46);
+  // animation: huerotate 6s infinite linear;
+  // filter: hue-rotate(360deg);
 }
 
 @keyframes huerotate {
@@ -22,12 +22,11 @@
 .navlink{
   color: white;
   font-size: 1.7rem;
-  
   font-weight: 700;
   display: flex;
   justify-content: space-around;
   padding-top: 1.5rem;
-  border-radius: 1rem;
+  
   
 
   & a {

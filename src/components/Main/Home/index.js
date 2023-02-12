@@ -8,7 +8,7 @@ function Home() {
     const updateBackgroundPosition = (e) => {
       mouseX = e.pageX;
       mouseY = e.pageY;
-      const traX = ((4 * mouseX) / 570) + 40;
+      const traX = ((4 * mouseX) / 570) + 34;
       const traY = ((4 * mouseY) / 570) + 50;
       console.log(traX);
       document.querySelector('.title_name').style.backgroundPosition = `${traX}% ${traY}%`;
@@ -26,6 +26,8 @@ function Home() {
         Marie Geneste
       </h1>
       <h1 className="title_job">Développeuse Web</h1>
+      <p className="citation">"C'est en forgeant que l'on devient forgeron"</p>
+      <p className="description">Bienvenue sur mon Portfolio. </p>
     </div>
   );
 }
