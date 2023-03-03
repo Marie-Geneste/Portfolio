@@ -5,7 +5,7 @@ function Header() {
     <div className="header">
       <div className="navlink">
         <a href="/">Home</a>
-        <a href="/">Compétences</a>
+        <a href="#competence">Compétences</a>
         <a href="/">Réalisations</a>
         <a href="/">Contact</a>
       </div>

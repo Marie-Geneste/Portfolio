@@ -24,12 +24,12 @@
 
   &_job{
     font-size: 2.5rem;
-    color: vars.$dark-color;
+    color: vars.$secund-color;
     font-family: vars.$primary-font;
     animation: apparitionJob 2s ease-out;
     font-weight: 600;
     margin: auto;
-    border-radius: 10px;
+
 
     &:hover{
       transform: rotate(180deg);
@@ -55,8 +55,26 @@
 
 .description{
   margin: 2rem;
-  border: solid 2px vars.$dark-color;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  border: solid 2px vars.$secund-color;
   border-radius: 15px;
+  background-color: vars.$secund-color;
+  font-size: 1.5rem;
+  color: vars.$primary-color;
+  font-weight: 600;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 10px 5px rgba(238, 132, 32, 0.315);
+}
+
+.mouse-icon{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.arrow-icon{
+  color: white;
 }
 
 
