@@ -23,7 +23,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" id="home">
       <h1 className="title_name">
         Marie Geneste
       </h1>

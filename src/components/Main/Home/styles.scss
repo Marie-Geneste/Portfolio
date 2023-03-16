@@ -5,7 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
 .home{
-  margin: auto;
+  margin: 9rem auto;
 }
 
 .title {
@@ -65,6 +65,11 @@
   font-weight: 600;
   padding: 1.5rem;
   box-shadow: 5px 5px 10px 5px rgba(238, 132, 32, 0.315);
+  transition: all 0.3s ease 0s;
+
+    &:hover {
+        transform: translateY(-7px);
+    }
 }
 
 .mouse-icon{

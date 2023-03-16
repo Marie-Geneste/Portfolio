@@ -8,6 +8,8 @@
   border-bottom: solid 2px rgb(17, 7, 46);
   // animation: huerotate 6s infinite linear;
   // filter: hue-rotate(360deg);
+  position:fixed;
+  width: 100%;
 }
 
 @keyframes huerotate {

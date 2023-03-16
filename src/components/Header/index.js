@@ -6,7 +6,7 @@ function Header() {
       <div className="navlink">
         <a href="/">Home</a>
         <a href="#competence">Compétences</a>
-        <a href="/">Réalisations</a>
+        <a href="#realisation">Réalisations</a>
         <a href="/">Contact</a>
       </div>
     </div>

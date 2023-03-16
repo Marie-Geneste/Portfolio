@@ -1,4 +1,64 @@
+@use 'src/styles/vars';
+
 #competence{
   display: flex;
-  margin: 0 auto;
+  margin: -10rem auto 5rem auto;
+  font-size: 4rem;
+  gap: 17rem;
+  align-items: center;
+  color: white;
+  
 }
+
+.competence{
+  &-icon-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+  }
+  &-icon-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+}
+
+.icon-node{
+  font-size: 6rem;
+  margin-bottom: -2rem;
+}
+
+svg{
+  transition: all 0.3s ease 0s;
+
+    &:hover {
+        transform: translateY(-7px);
+    }
+}
+
+.pulse-ball{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 0 #FFF;
+  animation: pulse 1.3s infinite;
+  color: vars.$primary-color;
+}
+
+.text{
+  position: relative;
+  right: 0%;
+  top: 30%;
+  font-size: 2.5rem;
+}
+
+@keyframes pulse {
+  to{
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.01);
+  }
+}
+
