@@ -1,11 +1,15 @@
 import './styles.scss';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { AiFillHtml5 } from 'react-icons/ai';
-import {
-  DiCss3, DiSass, DiReact, DiNodejsSmall, DiNodejs, DiNpm,
-} from 'react-icons/di';
-import { SiJavascript, SiPostgresql, SiExpress } from 'react-icons/si';
 import { useState } from 'react';
+import html from '../../../assets/html.png';
+import css from '../../../assets/css.png';
+import javascript from '../../../assets/javascript.png';
+import sass from '../../../assets/sass.png';
+import react from '../../../assets/react.png';
+import nodejs from '../../../assets/nodejs.png';
+import express from '../../../assets/express.png';
+import npm from '../../../assets/npm.png';
+import postgresql from '../../../assets/postgresql.png';
+import mongodb from '../../../assets/mongodb.png';
 
 const competences = {
   html: 'HTML',
@@ -17,6 +21,7 @@ const competences = {
   postgresql: 'PostgreSQL',
   express: 'Express.js',
   npm: 'npm',
+  mongodb: 'mongoDB',
 };
 
 function Competence() {
@@ -30,19 +35,19 @@ function Competence() {
   return (
     <div id="competence">
       <div className="competence-icon-left">
-        <AiFillHtml5 name="html" onMouseOver={handleHoverMouse} />
-        <DiCss3 name="css" onMouseOver={handleHoverMouse} />
-        <SiJavascript name="javascript" onMouseOver={handleHoverMouse} />
-        <DiSass name="sass" onMouseOver={handleHoverMouse} />
-        <DiReact name="react" onMouseOver={handleHoverMouse} />
+        <img src={html} alt="html" name="html" onMouseEnter={handleHoverMouse} />
+        <img src={css} alt="css" name="css" onMouseEnter={handleHoverMouse} />
+        <img src={javascript} alt="javascript" name="javascript" onMouseEnter={handleHoverMouse} />
+        <img src={sass} alt="sass" name="sass" onMouseEnter={handleHoverMouse} />
+        <img src={react} alt="react" name="react" onMouseEnter={handleHoverMouse} />
       </div>
       <div className="pulse-ball"><span className="text">{text}</span></div>
       <div className="competence-icon-right">
-        <DiNodejs name="nodejs" onMouseOver={handleHoverMouse} />
-        <DiNodejsSmall name="nodejs" onMouseOver={handleHoverMouse} />
-        <SiPostgresql name="postgresql" onMouseOver={handleHoverMouse} />
-        <SiExpress name="express" onMouseOver={handleHoverMouse} />
-        <DiNpm name="npm" onMouseOver={handleHoverMouse} />
+        <img src={nodejs} alt="nodejs" name="nodejs" onMouseEnter={handleHoverMouse} />
+        <img src={express} alt="express" name="express" onMouseEnter={handleHoverMouse} />
+        <img src={npm} alt="npm" name="npm" onMouseEnter={handleHoverMouse} />
+        <img src={postgresql} alt="postgresql" name="postgresql" onMouseEnter={handleHoverMouse} />
+        <img src={mongodb} alt="mongodb" name="mongodb" onMouseEnter={handleHoverMouse} />
       </div>
     </div>
   );

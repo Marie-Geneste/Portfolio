@@ -8,7 +8,7 @@ function Main() {
     <div className="main">
       <Home />
       <Competence />
-      <Realisation />
+      {/* <Realisation /> */}
     </div>
   );
 }

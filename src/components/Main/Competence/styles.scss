@@ -26,13 +26,9 @@
   
 }
 
-.icon-node{
-  font-size: 6rem;
-  margin-bottom: -2rem;
-}
-
-svg{
+img{
   transition: all 0.3s ease 0s;
+  width: 60px;
 
     &:hover {
         transform: translateY(-7px);
