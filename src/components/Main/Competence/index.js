@@ -35,19 +35,19 @@ function Competence() {
   return (
     <div id="competence">
       <div className="competence-icon-left">
-        <img src={html} alt="html" name="html" onMouseEnter={handleHoverMouse} />
-        <img src={css} alt="css" name="css" onMouseEnter={handleHoverMouse} />
-        <img src={javascript} alt="javascript" name="javascript" onMouseEnter={handleHoverMouse} />
-        <img src={sass} alt="sass" name="sass" onMouseEnter={handleHoverMouse} />
-        <img src={react} alt="react" name="react" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={html} alt="html" name="html" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={css} alt="css" name="css" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={javascript} alt="javascript" name="javascript" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={sass} alt="sass" name="sass" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={react} alt="react" name="react" onMouseEnter={handleHoverMouse} />
       </div>
       <div className="pulse-ball" id="pulseball"><span className="text">{text}</span></div>
       <div className="competence-icon-right">
-        <img src={nodejs} alt="nodejs" name="nodejs" onMouseEnter={handleHoverMouse} />
-        <img src={express} alt="express" name="express" onMouseEnter={handleHoverMouse} />
-        <img src={npm} alt="npm" name="npm" onMouseEnter={handleHoverMouse} />
-        <img src={postgresql} alt="postgresql" name="postgresql" onMouseEnter={handleHoverMouse} />
-        <img src={mongodb} alt="mongodb" name="mongodb" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={nodejs} alt="nodejs" name="nodejs" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={express} alt="express" name="express" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={npm} alt="npm" name="npm" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={postgresql} alt="postgresql" name="postgresql" onMouseEnter={handleHoverMouse} />
+        <img className="competence_img" src={mongodb} alt="mongodb" name="mongodb" onMouseEnter={handleHoverMouse} />
       </div>
     </div>
   );

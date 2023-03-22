@@ -1,0 +1,15 @@
+.card{
+  border: solid rgb(84, 186, 233) 4px;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 30%;
+  background-color: rgba(94, 252, 252, 0.2); /* Couleur de fond transparente */
+  
+  box-shadow: 0 0 20px rgba(140, 255, 255, 0.5); 
+
+  &_img{
+    width: 30%;
+  }
+}
+
+

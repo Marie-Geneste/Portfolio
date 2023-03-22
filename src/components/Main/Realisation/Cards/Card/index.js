@@ -1,38 +1,33 @@
 import './styles.scss';
+import {
+  string,
+} from 'prop-types';
 
-function Card() {
+function Card({
+  title, url, minia, technos, github, description, disclaimer,
+}) {
   return (
-    <div id="card">
-      <p>J'ai fait ci et ça</p>
+    <div className="card">
+      <img className="card_img" src={minia} alt="miniature du site" />
+      <div className="card_text">
+        <a href={url} target="_blank" rel="noreferrer">{title}</a>
+        <p className="card_disclamer">{disclaimer}</p>
+        <p className="card_description">Rapport de la mission : {description}</p>
+        <p className="card_technos">Outils utilisés : {technos}</p>
+        <a href={github}>Lien github</a>
+      </div>
     </div>
   );
 }
 
 export default Card;
 
-// import './styles.scss';
-// import {
-//   string, object,
-// } from 'prop-types';
-
-// function Repo({ name, owner, description }) {
-//   return (
-//     <div className="repo">
-//       <img src={owner.avatar_url} alt="" />
-//       <div className="text">
-//         <p className="name">{name}</p>
-//         <p className="login">{owner.login}</p>
-//         <p className="description">{description}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Repo;
-
-// Repo.propTypes = {
-//   // eslint-disable-next-line react/require-default-props
-//   description: string,
-//   name: string.isRequired,
-//   owner: object.isRequired,
-// };
+Card.propTypes = {
+  title: string.isRequired,
+  url: string.isRequired,
+  minia: string.isRequired,
+  technos: string.isRequired,
+  github: string.isRequired,
+  description: string.isRequired,
+  disclaimer: string.isRequired,
+};
