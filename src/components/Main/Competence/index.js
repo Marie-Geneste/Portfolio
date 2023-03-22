@@ -41,7 +41,7 @@ function Competence() {
         <img src={sass} alt="sass" name="sass" onMouseEnter={handleHoverMouse} />
         <img src={react} alt="react" name="react" onMouseEnter={handleHoverMouse} />
       </div>
-      <div className="pulse-ball"><span className="text">{text}</span></div>
+      <div className="pulse-ball" id="pulseball"><span className="text">{text}</span></div>
       <div className="competence-icon-right">
         <img src={nodejs} alt="nodejs" name="nodejs" onMouseEnter={handleHoverMouse} />
         <img src={express} alt="express" name="express" onMouseEnter={handleHoverMouse} />

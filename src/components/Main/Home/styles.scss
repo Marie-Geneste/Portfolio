@@ -10,7 +10,7 @@
 
 .title {
   &_name{
-    font-size: 6rem;
+    font-size: 10rem;
     margin: auto;
     font-weight: 800;
     color: transparent;
@@ -26,25 +26,9 @@
     font-size: 2.5rem;
     color: vars.$secund-color;
     font-family: vars.$primary-font;
-    animation: apparitionJob 2s ease-out;
+    padding-top: 2rem;
     font-weight: 600;
     margin: auto;
-
-
-    &:hover{
-      transform: rotate(180deg);
-    }
-  }
-
-  @keyframes apparitionJob {
-    from{
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    to{
-      opacity: 1;
-      transform: translateX(0px);
-    }
   }
 }
 
@@ -55,7 +39,7 @@
 
 .description{
   margin: 2rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   margin-bottom: 7rem;
   border: solid 2px vars.$secund-color;
   border-radius: 15px;
@@ -72,14 +56,13 @@
     }
 }
 
-.mouse-icon{
+.icons{
   color: white;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
 }
 
-.arrow-icon{
-  color: white;
+.mouse-icon{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 
