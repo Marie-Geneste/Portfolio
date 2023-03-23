@@ -2,6 +2,7 @@ import './styles.scss';
 import {
   string,
 } from 'prop-types';
+import { BsGithub } from 'react-icons/bs';
 
 function Card({
   title, url, minia, technos, github, description, disclaimer,
@@ -9,12 +10,12 @@ function Card({
   return (
     <div className="card">
       <img className="card_img" src={minia} alt="miniature du site" />
+      <a className="card_title" href={url} target="_blank" rel="noreferrer">{title}</a>
       <div className="card_text">
-        <a href={url} target="_blank" rel="noreferrer">{title}</a>
-        <p className="card_disclamer">{disclaimer}</p>
-        <p className="card_description">Rapport de la mission : {description}</p>
-        <p className="card_technos">Outils utilisés : {technos}</p>
-        <a href={github}>Lien github</a>
+        <p className="card_disclaimer">{disclaimer}</p>
+        <p className="card_description"><span className="card_subtitle">Rapport de mission : </span>{description}</p>
+        <p className="card_technos"><span className="card_subtitle">Outils utilisés : </span>{technos}</p>
+        <a className="card_github" href={github} target="_blank" rel="noreferrer">.<BsGithub />.</a>
       </div>
     </div>
   );
@@ -29,5 +30,6 @@ Card.propTypes = {
   technos: string.isRequired,
   github: string.isRequired,
   description: string.isRequired,
-  disclaimer: string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  disclaimer: string,
 };
