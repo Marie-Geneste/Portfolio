@@ -5,7 +5,7 @@ import {
 import { BsGithub } from 'react-icons/bs';
 
 function Card({
-  title, url, minia, technos, github, description, disclaimer,
+  title, url, minia, technos, github, description, disclaimer, githubBack,
 }) {
   return (
     <div className="card">
@@ -15,7 +15,12 @@ function Card({
         <p className="card_disclaimer">{disclaimer}</p>
         <p className="card_description"><span className="card_subtitle">Rapport de mission : </span>{description}</p>
         <p className="card_technos"><span className="card_subtitle">Outils utilisés : </span>{technos}</p>
-        <a className="card_github" href={github} target="_blank" rel="noreferrer">.<BsGithub />.</a>
+        <div className="card_allgithub">
+          <a className="card_github" href={github} target="_blank" rel="noreferrer">.<BsGithub />.</a>
+          {
+        githubBack ? <a className="card_github" href={githubBack} target="_blank" rel="noreferrer"><BsGithub />.</a> : null
+        }
+        </div>
       </div>
     </div>
   );
@@ -32,4 +37,6 @@ Card.propTypes = {
   description: string.isRequired,
   // eslint-disable-next-line react/require-default-props
   disclaimer: string,
+  // eslint-disable-next-line react/require-default-props
+  githubBack: string,
 };

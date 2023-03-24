@@ -21,10 +21,11 @@ export default [
   {
     id: 3,
     title: 'O\'Stretch',
-    url: 'https://testtest-sigma-kohl.vercel.app/',
+    url: 'https://o-stretch-front.vercel.app/',
     minia: 'https://i.goopics.net/lns6kf.jpg',
     technos: 'React, Sass, NodeJS, PostgreSQL, Sequelize',
-    github: 'https://github.com/Marie-Geneste/Pokedex',
+    github: 'https://github.com/Marie-Geneste/O-Stretch--Front',
+    githubBack: 'https://github.com/Marie-Geneste/O-Stretch--Back',
     description: 'Un projet d\'un mois fait en équipe avec la méthodologie agile, du cahier des charges au déploiement d\'un mvp. C\'est un site qui répertorie les étirements, classés par catégories avec un corps humain cliquable. Présence de 2 CRUD : un pour l\'utilisateur et un pour l\'administrateur qui peut gérer les étirements.',
   },
 ];
