@@ -2,6 +2,7 @@ import './styles.scss';
 import Home from './Home';
 import Competence from './Competence';
 import Realisation from './Realisation';
+import CV from './CV';
 
 function Main() {
   return (
@@ -9,6 +10,7 @@ function Main() {
       <Home />
       <Competence />
       <Realisation />
+      <CV />
     </div>
   );
 }

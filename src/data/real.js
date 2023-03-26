@@ -28,4 +28,13 @@ export default [
     githubBack: 'https://github.com/Marie-Geneste/O-Stretch--Back',
     description: 'Un projet d\'un mois fait en équipe avec la méthodologie agile, du cahier des charges au déploiement d\'un mvp. C\'est un site qui répertorie les étirements, classés par catégories avec un corps humain cliquable. Présence de 2 CRUD : un pour l\'utilisateur et un pour l\'administrateur qui peut gérer les étirements.',
   },
+  {
+    id: 4,
+    title: 'Ce site',
+    url: 'https://peppy-gecko-1f7388.netlify.app/',
+    minia: 'https://www.academie-epione.com/wp-content/uploads/2021/01/inception_hypnose_academie_epione.png',
+    technos: 'React, Sass',
+    github: 'https://github.com/Marie-Geneste/Portfolio',
+    description: 'Un site pour les gouverner tous.',
+  },
 ];

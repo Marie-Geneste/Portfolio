@@ -7,7 +7,7 @@ function Header() {
         <a href="/">Home</a>
         <a href="#competence">Compétences</a>
         <a href="#realisation">Réalisations</a>
-        <a href="/">C.V.</a>
+        <a href="#CV">C.V.</a>
       </div>
     </div>
   );
