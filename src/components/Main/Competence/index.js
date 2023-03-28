@@ -33,7 +33,7 @@ function Competence() {
   };
 
   return (
-    <div id="competence">
+    <div id="competence" className="competence">
       <div className="competence-icon-left">
         <img className="competence_img" src={html} alt="html" name="html" onMouseEnter={handleHoverMouse} />
         <img className="competence_img" src={css} alt="css" name="css" onMouseEnter={handleHoverMouse} />

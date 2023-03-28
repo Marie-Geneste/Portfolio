@@ -1,6 +1,6 @@
 @use 'src/styles/vars';
 
-#competence{
+.competence{
   display: flex;
   margin: -10rem auto 5rem auto;
   font-size: 4rem;
@@ -8,9 +8,7 @@
   align-items: center;
   color: white;
   padding-top: 14rem;
-}
 
-.competence{
   &-icon-left{
     display: flex;
     flex-direction: column;

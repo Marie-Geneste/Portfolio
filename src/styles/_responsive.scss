@@ -1,0 +1,45 @@
+@media screen and (max-width:1800px){
+  .home{
+    .title_name{
+      line-height: 150px;
+    }
+  }
+}
+
+
+@media screen and (max-width:1400px){
+  .cards{
+    .card{
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width:1200px){
+  .main{
+    .competence{
+      gap: 10rem;
+    }
+  }
+  
+  
+  .cards{
+    .card{
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width:1040px){
+  .home{
+    .title_name{
+      font-size: 8rem;
+    }
+  }
+
+  .cards{
+    .card{
+      width: 75%;
+    }
+  }
+}

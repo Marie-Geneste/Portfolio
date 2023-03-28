@@ -1,7 +1,6 @@
 // == Import
 import Header from '../Header';
 import Main from '../Main';
-import './styles.scss';
 
 // == Composant
 function App() {
