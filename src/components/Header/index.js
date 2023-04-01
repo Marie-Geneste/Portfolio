@@ -41,8 +41,8 @@ function Header() {
 
         <ul className="mobile-nav-links closed" id="mobile-nav-links">
           <Link activeClass="active" to="home" spy smooth offset={-250} duration={500} onClick={handleDropdown}>Home</Link>
-          <Link activeClass="active" to="competence" spy smooth offset={-100} duration={500} onClick={handleDropdown}>Compétences</Link>
-          <Link activeClass="active" to="realisation" spy smooth offset={-100} duration={500} onClick={handleDropdown}>Réalisations</Link>
+          <Link activeClass="active" to="competence" spy smooth offset={-250} duration={500} onClick={handleDropdown}>Compétences</Link>
+          <Link activeClass="active" to="realisation" spy smooth offset={-175} duration={500} onClick={handleDropdown}>Réalisations</Link>
           <Link activeClass="active" to="CV" spy smooth offset={-150} duration={500} onClick={handleDropdown}>C.V.</Link>
         </ul>
       </div>
@@ -59,7 +59,7 @@ function Header() {
 
       {/* Tablets */}
       <MediaQuery minWidth={481} maxWidth={768}>
-        {mobileNav()}
+        {desktopNav()}
       </MediaQuery>
 
       {/* Small screens */}

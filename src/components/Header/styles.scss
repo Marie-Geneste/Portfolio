@@ -11,6 +11,7 @@
   position: fixed;
   z-index: 2;
   width: 100%;
+  background-size: cover;
 }
 
 @keyframes huerotate {
@@ -63,9 +64,9 @@
     padding: 8px;
     width: 40px;
     height: 40px;
-    border: 2px solid $secund-color;
+    border: 2px solid white;
     border-radius: 50%;
-    color: $secund-color;
+    color: white;
     font-size: 2rem;
   }
 

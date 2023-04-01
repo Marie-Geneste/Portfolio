@@ -70,3 +70,45 @@
     }
   }
 }
+
+@media screen and (max-width:740px){
+  .main{
+    .home{
+      .title_name{
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+    .competence{
+      gap: 7rem;
+    }
+  }
+
+  .cards{
+    .card{
+      width: 90%;
+    }
+  }
+
+  .cv{
+    .cv_element{
+      gap: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width:703px){
+  .main{
+    .home{
+      .title_name{
+        width: 100%;
+      }
+    }
+  }
+
+  .cards{
+    .card{
+      width: 100%;
+    }
+  }
+}
