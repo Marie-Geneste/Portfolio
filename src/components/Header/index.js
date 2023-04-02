@@ -53,12 +53,12 @@ function Header() {
   return (
     <div className="Navbar">
       {/* Mobile */}
-      <MediaQuery minWidth={320} maxWidth={480}>
+      <MediaQuery minWidth={320} maxWidth={540}>
         {mobileNav()}
       </MediaQuery>
 
       {/* Tablets */}
-      <MediaQuery minWidth={481} maxWidth={768}>
+      <MediaQuery minWidth={541} maxWidth={768}>
         {desktopNav()}
       </MediaQuery>
 
