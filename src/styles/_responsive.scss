@@ -218,3 +218,33 @@
     }
   }
 }
+
+@media screen and (max-width:440px){
+  .main{
+    .competence{
+      .competence_img{
+      width: 30px;
+      }
+      .pulse-ball{
+        width: 120px;
+        height: 120px;
+      }
+      .text{
+        font-size: 1.5rem;
+        top: 12%;
+      }
+    }
+
+
+    #msg{
+      font-size: 3rem;
+    }
+
+    .cv{
+      .cv_image{
+        width: 200px;
+        height: 325px;
+      }
+    }
+  }
+}

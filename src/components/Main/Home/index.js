@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import './styles.scss';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { BsMouse, BsArrowDown } from 'react-icons/bs';
 
 function Home() {
+  // Pour bouger le background image au survol de la souris sur le title name
   useEffect(() => {
     let mouseX;
     let mouseY;
