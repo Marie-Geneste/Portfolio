@@ -72,17 +72,17 @@ function Home() {
     updateBackgroundPosition = (e) => {
       let traX = 34;
       let traY = 50;
-      traX -= e.gamma / 50;
-      traY += e.beta / 570;
-      traX = Math.max(0, Math.min(100, traX));
-      traY = Math.max(0, Math.min(100, traY));
+      traX -= e.gamma;
+      traY += e.beta;
+      traX = Math.max(Math.min(traX, 40), -40) / 20;
+      traY = Math.max(Math.min(traY, 40), -40) / 20;
       titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
     };
     const titleElmt = titleRef.current;
     titleElmt.addEventListener('deviceorientation', updateBackgroundPosition);
 
     return () => {
-      window.removeEventListener('deviceorientation', updateBackgroundPosition);
+      titleElmt.removeEventListener('deviceorientation', updateBackgroundPosition);
     };
   }, [isDesktop]);
 
