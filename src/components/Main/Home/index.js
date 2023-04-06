@@ -1,47 +1,3 @@
-// import { useEffect } from 'react';
-// import './styles.scss';
-// import { BsMouse, BsArrowDown } from 'react-icons/bs';
-
-// function Home() {
-//   // Pour bouger le background image au survol de la souris sur le title name
-//   useEffect(() => {
-//     let mouseX;
-//     let mouseY;
-//     const updateBackgroundPosition = (e) => {
-//       mouseX = e.pageX;
-//       mouseY = e.pageY;
-//       const traX = ((4 * mouseX) / 570) + 34;
-//       const traY = ((4 * mouseY) / 570) + 50;
-//       document.querySelector('.title_name').style.backgroundPosition = `${traX}% ${traY}%`;
-//     };
-//     const titleElmt = document.querySelector('.title_name');
-//     titleElmt.addEventListener('mousemove', updateBackgroundPosition);
-//     return () => {
-//       titleElmt.removeEventListener('mousemove', updateBackgroundPosition);
-//     };
-//   }, []);
-
-//   return (
-//     <div className="home" id="home">
-//       <h1 className="title_name">
-//         Marie Geneste
-//       </h1>
-//       <h1 className="title_job">Développeuse Web</h1>
-//       {/* <p className="citation">"C'est en forgeant que l'on devient forgeron"</p> */}
-//       <div className="description">
-//         <p>Bienvenue sur mon Portfolio.</p>
-//         <p>Je suis une grande passionnée de l'Univers du Web. Je vous invite à naviguer entre les composants stellaires pour trouver votre destination. Bon voyage !</p>
-//       </div>
-//       <div className="icons">
-//         <div className="mouse-icon"><BsMouse /></div>
-//         <div className="arrow-icon"><BsArrowDown /></div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
 import { useEffect, useRef } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import useDeviceOrientation from 'react-device-orientation-hook';
@@ -50,8 +6,11 @@ import './styles.scss';
 import { BsMouse, BsArrowDown } from 'react-icons/bs';
 
 function Home() {
+  // ciblage du title_name
   const titleRef = useRef(null);
+  // utilisation du gamma et beta pour écouter les mouvements du mobile
   const { gamma, beta } = useDeviceOrientation();
+  // utilisation de useMediQuery pour déterminer le changement d'écouteur en fonction de l'écran
   const isDesktop = useMediaQuery({ minWidth: 769 });
 
   useEffect(() => {
@@ -60,6 +19,7 @@ function Home() {
 
     if (isDesktop) {
       updateBackgroundPosition = (e) => {
+        // calcul des mouvements de la souris sur les axes X et Y
         const traX = ((4 * e.pageX) / 570) + 34;
         const traY = ((4 * e.pageY) / 570) + 50;
         titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
@@ -73,10 +33,12 @@ function Home() {
     }
 
     updateBackgroundPosition = () => {
+      // calcul pour les mouvements du mobile
       let traX = 15;
       let traY = 35;
       traX -= gamma / 5;
       traY += beta / 5;
+      // math max et min pour éviter que le fond d'écran ne sorte du cadre de la page
       traX = Math.max(0, Math.min(100, traX));
       traY = Math.max(0, Math.min(100, traY));
       titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;

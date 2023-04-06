@@ -16,6 +16,7 @@ export default [
     minia: 'https://i.goopics.net/o3847x.jpg',
     technos: 'HTML, CSS, Javascript',
     github: 'https://github.com/Marie-Geneste/Frontend-Mentor---Interactive-card-details-form',
+    disclaimer: 'Pas encore responsive :(',
     description: 'Un projet frontend mentor pour s\'entraîner à l\'intégration avec une partie javascript pour faire apparaître les données entrées dans les input sur les cartes.',
   },
   {
