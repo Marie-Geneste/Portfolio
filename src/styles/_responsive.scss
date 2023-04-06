@@ -256,6 +256,7 @@
       .title_name{
         font-size: 4rem;
         line-height:60px;
+        background-position: 15% 35% !important;
       }
       .title_job{
         padding-top: 0.5rem;
@@ -263,7 +264,7 @@
       }
       .description{
         font-size: 1rem;
-        width: 80%;
+        line-height:20px;
       }
     }
   }
