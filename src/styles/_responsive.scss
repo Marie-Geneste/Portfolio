@@ -248,3 +248,23 @@
     }
   }
 }
+
+
+@media screen and (max-width:420px){
+  .main{
+    .home{
+      .title_name{
+        font-size: 4rem;
+        line-height:60px;
+      }
+      .title_job{
+        padding-top: 0.5rem;
+        font-size: 1.6rem;
+      }
+      .description{
+        font-size: 1rem;
+        width: 80%;
+      }
+    }
+  }
+}
