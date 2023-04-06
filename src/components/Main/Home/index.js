@@ -72,7 +72,7 @@ function Home() {
       };
     }
 
-    updateBackgroundPosition = (e) => {
+    updateBackgroundPosition = () => {
       const traX = ((4 * gamma) / 570) + 15;
       const traY = ((4 * beta) / 570) + 35;
       titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
