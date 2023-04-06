@@ -72,8 +72,8 @@ function Home() {
     updateBackgroundPosition = (e) => {
       let traX = 15;
       let traY = 35;
-      traX -= e.gamma / 50;
-      traY += e.beta / 50;
+      traX -= e.gamma / 5;
+      traY += e.beta / 5;
       traX = Math.max(0, Math.min(100, traX));
       traY = Math.max(0, Math.min(100, traY));
       titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
