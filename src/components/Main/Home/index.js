@@ -70,12 +70,14 @@ function Home() {
     }
 
     updateBackgroundPosition = (e) => {
-      let traX = 15;
-      let traY = 35;
-      traX -= e.gamma / 5;
-      traY += e.beta / 5;
-      traX = Math.max(0, Math.min(100, traX));
-      traY = Math.max(0, Math.min(100, traY));
+      // let traX = 15;
+      // let traY = 35;
+      // traX -= e.gamma / 5;
+      // traY += e.beta / 5;
+      // traX = Math.max(0, Math.min(100, traX));
+      // traY = Math.max(0, Math.min(100, traY));
+      const traX = ((4 * e.gamma) / 570) + 15;
+      const traY = ((4 * e.beta) / 570) + 35;
       titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
     };
 
