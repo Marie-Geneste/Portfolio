@@ -53,15 +53,15 @@ function Home() {
 
   useEffect(() => {
     let updateBackgroundPosition = null;
+    const titleElmt = titleRef.current;
 
     if (isDesktop) {
       updateBackgroundPosition = (e) => {
         const traX = ((4 * e.pageX) / 570) + 34;
         const traY = ((4 * e.pageY) / 570) + 50;
-        titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
+        titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
       };
 
-      const titleElmt = titleRef.current;
       titleElmt.addEventListener('mousemove', updateBackgroundPosition);
 
       return () => {
@@ -76,9 +76,9 @@ function Home() {
       traY += e.beta / 5;
       traX = Math.max(0, Math.min(100, traX));
       traY = Math.max(0, Math.min(100, traY));
-      titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
+      titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
     };
-    const titleElmt = titleRef.current;
+
     titleElmt.addEventListener('deviceorientation', updateBackgroundPosition);
 
     return () => {
