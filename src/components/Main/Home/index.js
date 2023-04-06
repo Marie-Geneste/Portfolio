@@ -79,10 +79,10 @@ function Home() {
       titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
     };
 
-    titleElmt.addEventListener('deviceorientationabsolute', updateBackgroundPosition);
+    titleElmt.addEventListener('devicemotion', updateBackgroundPosition);
 
     return () => {
-      titleElmt.removeEventListener('deviceorientationabsolute', updateBackgroundPosition);
+      titleElmt.removeEventListener('devicemotion', updateBackgroundPosition);
     };
   }, [isDesktop]);
 
