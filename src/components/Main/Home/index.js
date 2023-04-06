@@ -67,25 +67,28 @@ function Home() {
       return () => {
         titleElmt.removeEventListener('mousemove', updateBackgroundPosition);
       };
+    // eslint-disable-next-line no-else-return
     }
+    // eslint-disable-next-line no-else-return
+    else {
+      updateBackgroundPosition = (e) => {
+        let traX = 34;
+        let traY = 50;
+        traX -= e.gamma / 50;
+        traY += e.beta / 50;
+        traX = Math.max(0, Math.min(100, traX));
+        traY = Math.max(0, Math.min(100, traY));
+        titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
+      };
 
-    updateBackgroundPosition = (e) => {
-      let traX = 34;
-      let traY = 50;
-      traX -= e.gamma / 570;
-      traY += e.beta / 570;
-      traX = Math.max(0, Math.min(100, traX));
-      traY = Math.max(0, Math.min(100, traY));
-      titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
-    };
+      window.addEventListener('devicemotion', updateBackgroundPosition);
+      window.addEventListener('deviceorientation', updateBackgroundPosition);
 
-    window.addEventListener('devicemotion', updateBackgroundPosition);
-    window.addEventListener('deviceorientation', updateBackgroundPosition);
-
-    return () => {
-      window.removeEventListener('devicemotion', updateBackgroundPosition);
-      window.removeEventListener('deviceorientation', updateBackgroundPosition);
-    };
+      return () => {
+        window.removeEventListener('devicemotion', updateBackgroundPosition);
+        window.removeEventListener('deviceorientation', updateBackgroundPosition);
+      };
+    }
   }, [isDesktop]);
 
   return (
