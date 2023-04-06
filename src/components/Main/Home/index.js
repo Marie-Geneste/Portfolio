@@ -43,19 +43,19 @@
 // export default Home;
 
 import { useEffect, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { isMobile } from 'react-device-detect';
 import './styles.scss';
 import { BsMouse, BsArrowDown } from 'react-icons/bs';
 
 function Home() {
   const titleRef = useRef(null);
-  const isDesktop = useMediaQuery({ minWidth: 769 });
 
   useEffect(() => {
     let updateBackgroundPosition = null;
     const titleElmt = titleRef.current;
 
-    if (isDesktop) {
+    if (!isMobile) {
       updateBackgroundPosition = (e) => {
         const traX = ((4 * e.pageX) / 570) + 34;
         const traY = ((4 * e.pageY) / 570) + 50;
@@ -79,12 +79,12 @@ function Home() {
       titleElmt.style.backgroundPosition = `${traX}% ${traY}%`;
     };
 
-    titleElmt.addEventListener('devicemotion', updateBackgroundPosition);
+    window.addEventListener('deviceorientation', updateBackgroundPosition);
 
     return () => {
-      titleElmt.removeEventListener('devicemotion', updateBackgroundPosition);
+      window.removeEventListener('deviceorientation', updateBackgroundPosition);
     };
-  }, [isDesktop]);
+  }, []);
 
   return (
     <div className="home" id="home">
