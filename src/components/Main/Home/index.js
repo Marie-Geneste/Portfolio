@@ -70,11 +70,16 @@ function Home() {
     }
 
     updateBackgroundPosition = (e) => {
-      const traX = ((4 * e.gamma) / 570) + 34;
-      const traY = ((4 * e.beta) / 570) + 50;
+      let traX = 34;
+      let traY = 50;
+      traX -= e.gamma / 50;
+      traY += e.beta / 570;
+      traX = Math.max(0, Math.min(100, traX));
+      traY = Math.max(0, Math.min(100, traY));
       titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
     };
-    window.addEventListener('deviceorientation', updateBackgroundPosition);
+    const titleElmt = titleRef.current;
+    titleElmt.addEventListener('deviceorientation', updateBackgroundPosition);
 
     return () => {
       window.removeEventListener('deviceorientation', updateBackgroundPosition);
