@@ -52,22 +52,24 @@ function Home() {
   const isDesktop = useMediaQuery({ minWidth: 769 });
 
   useEffect(() => {
-    let updateBackgroundPosition;
+    let updateBackgroundPosition = null;
+
     if (isDesktop) {
       updateBackgroundPosition = (e) => {
-        // Calcul de la position de fond en fonction de la position de la souris
         const traX = ((4 * e.pageX) / 570) + 34;
         const traY = ((4 * e.pageY) / 570) + 50;
         titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
       };
+
       const titleElmt = titleRef.current;
       titleElmt.addEventListener('mousemove', updateBackgroundPosition);
+
       return () => {
         titleElmt.removeEventListener('mousemove', updateBackgroundPosition);
       };
     }
+
     updateBackgroundPosition = (e) => {
-      // Calcul de la position de fond en fonction des mouvements du périphérique
       let traX = 34;
       let traY = 50;
       traX -= e.gamma / 50;
@@ -76,8 +78,10 @@ function Home() {
       traY = Math.max(0, Math.min(100, traY));
       titleRef.current.style.backgroundPosition = `${traX}% ${traY}%`;
     };
+
     window.addEventListener('devicemotion', updateBackgroundPosition);
     window.addEventListener('deviceorientation', updateBackgroundPosition);
+
     return () => {
       window.removeEventListener('devicemotion', updateBackgroundPosition);
       window.removeEventListener('deviceorientation', updateBackgroundPosition);
@@ -90,7 +94,6 @@ function Home() {
         Marie Geneste
       </h1>
       <h1 className="title_job">Développeuse Web</h1>
-      {/* <p className="citation">"C'est en forgeant que l'on devient forgeron"</p> */}
       <div className="description">
         <p>Bienvenue sur mon Portfolio.</p>
         <p>Je suis une grande passionnée de l'Univers du Web. Je vous invite à naviguer entre les composants stellaires pour trouver votre destination. Bon voyage !</p>
