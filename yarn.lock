@@ -5714,6 +5714,11 @@ react-device-detect@^2.2.3:
   dependencies:
     ua-parser-js "^1.0.33"
 
+react-device-orientation-hook@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-device-orientation-hook/-/react-device-orientation-hook-1.0.1.tgz#62890d1d5477a464103bf016e28b90cd37125f9c"
+  integrity sha512-GHkIHfU7qDu1Njiu86c/7mu51X7LT4EscyUYr7TusKKF/sjjClZcYzTM5n4yf1GyEmtsSDh7o0PuOIvinxJOCA==
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
